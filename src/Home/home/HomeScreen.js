@@ -352,7 +352,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => navigation.navigate('Vouchers', {userId})}>
+          onPress={() => navigation.navigate('VoucherScreen', {userId})}>
           <Image
             source={require('../../assets/vouchers.png')}
             style={styles.navIcon}
@@ -361,7 +361,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => navigation.navigate('Saved', {userId})}>
+          onPress={() => navigation.navigate('SavedScreen', {userId})}>
           <Image
             source={require('../../assets/saved.png')}
             style={styles.navIcon}
@@ -379,7 +379,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => navigation.navigate('Profile', {userId})}>
+          onPress={() => navigation.navigate('ProfileScreen', {userId})}>
           <Image
             source={require('../../assets/profile.png')}
             style={styles.navIcon}

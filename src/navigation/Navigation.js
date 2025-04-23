@@ -24,6 +24,9 @@ import PaymentScreen from '../payment/PaymentScreen';
 import VNPayWebView from '../payment/VNPayWebView';
 import MoMoWebView from '../payment/MoMoWebView';
 import BookingSuccess from '../payment/BookingSuccess';
+import SavedScreen from '../Home/saved/SavedScreen';
+import VoucherScreen from '../Home/vouchers/VoucherScreen';
+import ProfileScreen from '../Home/profile/ProfileScreen';
 const Stack = createStackNavigator();
 
 const Navigation = () => {
@@ -58,6 +61,9 @@ const Navigation = () => {
         <Stack.Screen name="VNPayWebView" component={VNPayWebView} />
         <Stack.Screen name="MoMoWebView" component={MoMoWebView} />
         <Stack.Screen name="BookingSuccess" component={BookingSuccess} />
+        <Stack.Screen name="SavedScreen" component={SavedScreen} />
+        <Stack.Screen name="VoucherScreen" component={VoucherScreen} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
