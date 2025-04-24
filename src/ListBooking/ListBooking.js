@@ -347,7 +347,12 @@ const ListBooking = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Danh sách đặt phòng</Text>
+       <View style={styles.header}>
+               <TouchableOpacity onPress={() => navigation.goBack()}>
+                  <Image source={require('../assets/back.png')} style={styles.backButton} />
+              </TouchableOpacity>
+              <Text style={styles.title}>Giỏ hàng cần thanh toán</Text>
+            </View>
 
       <FlatList
         data={bookings}
@@ -387,8 +392,16 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 16,
-    textAlign: 'center',
+  },
+  backButton: {
+    width: 24,
+    height: 24,
+    marginRight: 15,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
   },
   listContent: {
     paddingBottom: 80,

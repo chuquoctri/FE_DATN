@@ -27,6 +27,7 @@ import BookingSuccess from '../payment/BookingSuccess';
 import SavedScreen from '../Home/saved/SavedScreen';
 import VoucherScreen from '../Home/vouchers/VoucherScreen';
 import ProfileScreen from '../Home/profile/ProfileScreen';
+import UpdateProfile from '../Home/profile/Updateprofile';
 const Stack = createStackNavigator();
 
 const Navigation = () => {
@@ -64,6 +65,7 @@ const Navigation = () => {
         <Stack.Screen name="SavedScreen" component={SavedScreen} />
         <Stack.Screen name="VoucherScreen" component={VoucherScreen} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="UpdateProfile" component={UpdateProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

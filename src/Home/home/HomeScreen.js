@@ -343,7 +343,7 @@ const HomeScreen = () => {
       <View style={styles.bottomNav}>
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => navigation.navigate('Home', {userId})}>
+          onPress={() => navigation.navigate('HomeScreen', {userId})}>
           <Image
             source={require('../../assets/home.png')}
             style={styles.navIcon}
