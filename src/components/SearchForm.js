@@ -137,7 +137,10 @@ const SearchForm = ({hotelId, onSearch, onClose}) => {
       <View style={styles.header}>
         <Text style={styles.title}>Search Room</Text>
         <TouchableOpacity style={styles.closeButton} onPress={onClose}>
-          <Text style={styles.closeButtonText}>X</Text>
+          <Image
+            source={require('../assets/x.png')} // Make sure the path is correct
+            style={styles.closeIcon}
+          />
         </TouchableOpacity>
       </View>
 
@@ -259,11 +262,12 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     alignSelf: 'flex-end',
+    padding: 5, // Add padding for better touch area
   },
-  closeButtonText: {
-    fontSize: 25,
-    color: '#000',
-    marginTop: -45,
+  closeIcon: {
+    width: 24, // Adjust size as needed
+    height: 24, // Adjust size as needed
+    tintColor: '#000', // Optional: if you want to change the color
   },
   label: {
     fontSize: 16,

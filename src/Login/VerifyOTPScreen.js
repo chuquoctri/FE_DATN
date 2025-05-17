@@ -50,14 +50,14 @@ const VerifyOTPScreen = ({route, navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>OTP Authentication</Text>
+      <Text style={styles.title}>Xác thực OTP</Text>
       <Text style={styles.subtitle}>
-        Enter the OTP code sent to {email} and reset new password.
+        Nhập mã OTP được gửi đến {email} và đặt lại mật khẩu mới.
       </Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Enter OTP code"
+        placeholder="Nhập mã OTP"
         placeholderTextColor="#888888"
         keyboardType="numeric"
         maxLength={6}
@@ -67,7 +67,7 @@ const VerifyOTPScreen = ({route, navigation}) => {
 
       <TextInput
         style={styles.input}
-        placeholder="Enter new password"
+        placeholder="Nhập mật khẩu mới"
         placeholderTextColor="#888888"
         secureTextEntry
         value={matKhauMoi}
@@ -81,7 +81,7 @@ const VerifyOTPScreen = ({route, navigation}) => {
         {loading ? (
           <ActivityIndicator color="#fff" />
         ) : (
-          <Text style={styles.buttonText}>Reset Password</Text>
+          <Text style={styles.buttonText}>Đặt lại mật khẩu</Text>
         )}
       </TouchableOpacity>
     </View>

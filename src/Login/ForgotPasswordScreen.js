@@ -57,15 +57,15 @@ const ForgotPasswordScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Forgot Password</Text>
-      <Text style={styles.subtitle}>Enter email to receive your OTP</Text>
+      <Text style={styles.title}>Quên mật khẩu</Text>
+      <Text style={styles.subtitle}>Nhập email để nhận OTP của bạn</Text>
 
       <View>
         <Text style={styles.label}>Email</Text>
         <View style={styles.inputContainer}>
           <Image source={require('../assets/email.png')} style={styles.icon} />
           <TextInput
-            placeholder="Enter your email..."
+            placeholder="Nhập email của bạn..."
             placeholderTextColor="#888888"
             value={email}
             onChangeText={setEmail}
@@ -76,7 +76,7 @@ const ForgotPasswordScreen = ({navigation}) => {
       </View>
 
       <TouchableOpacity style={styles.button} onPress={handleSendOTP}>
-        <Text style={styles.buttonText}>Send OTP</Text>
+        <Text style={styles.buttonText}>Nhận OTP</Text>
       </TouchableOpacity>
     </View>
   );

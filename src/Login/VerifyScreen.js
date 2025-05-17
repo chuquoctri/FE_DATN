@@ -88,8 +88,10 @@ const VerifyScreen = ({route}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Enter Verification Code</Text>
-      <Text style={styles.subtitle}>We have sent a code to email: {email}</Text>
+      <Text style={styles.title}>Nhập mã xác minh</Text>
+      <Text style={styles.subtitle}>
+        Chúng tôi đã gửi mã tới email: {email}
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -108,16 +110,16 @@ const VerifyScreen = ({route}) => {
         {loading ? (
           <ActivityIndicator color="#fff" />
         ) : (
-          <Text style={styles.buttonText}>Continue</Text>
+          <Text style={styles.buttonText}>Tiếp tục</Text>
         )}
       </TouchableOpacity>
 
       <View
         style={{flexDirection: 'row', justifyContent: 'center', marginTop: 30}}>
-        <Text style={{color: '#000'}}>Didn't receive the code? </Text>
+        <Text style={{color: '#000'}}>Không nhận được mã? </Text>
         <TouchableOpacity onPress={handleResendOTP} disabled={resending}>
           <Text style={{fontWeight: 'bold', color: '#000'}}>
-            {resending ? 'Resending...' : 'Resend the OTP'}
+            {resending ? 'Resending...' : 'Gửi lại OTP'}
           </Text>
         </TouchableOpacity>
       </View>

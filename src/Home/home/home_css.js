@@ -282,4 +282,5 @@ export default StyleSheet.create({
     fontSize: 12,
     color: '#000',
   },
+  
 });

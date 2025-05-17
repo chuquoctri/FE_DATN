@@ -68,42 +68,42 @@ const UpdateInfoScreen = ({route}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Setup Your Account</Text>
+      <Text style={styles.title}>Thiết lập tài khoản của bạn</Text>
       <Text style={{color: '#000'}}>
-        Complete your account to start your journey{' '}
+        Hoàn tất tài khoản của bạn để bắt đầu hành trình{' '}
       </Text>
 
       <Text style={{fontSize: 14, color: '#000', marginTop: 60}}>
-        Full Name
+        Họ và tên
       </Text>
       <TextInput
         style={styles.input}
-        placeholder="Full name"
+        placeholder="Nhập họ và tên của bạn..."
         placeholderTextColor="#888888"
         value={fullName}
         onChangeText={setFullName}
       />
 
-      <Text style={styles.label}>Phone Number</Text>
+      <Text style={styles.label}>Số điện thoại</Text>
       <TextInput
         style={styles.input}
-        placeholder="Field Text "
+        placeholder="Nhập số điện thoại của bạn... "
         placeholderTextColor="#888888"
         keyboardType="phone-pad"
         value={phone}
         onChangeText={setPhone}
       />
 
-      <Text style={styles.label}>Address</Text>
+      <Text style={styles.label}>Địa chỉ</Text>
       <TextInput
         style={styles.input}
-        placeholder="Field Text "
+        placeholder="Nhập địa chỉ của bạn..."
         placeholderTextColor="#888888"
         value={address}
         onChangeText={setAddress}
       />
 
-      <Text style={styles.label}>Birth Date</Text>
+      <Text style={styles.label}>Ngày sinh</Text>
       {/* Chọn ngày sinh */}
       <TouchableOpacity
         onPress={() => setShowPicker(true)}
@@ -134,7 +134,7 @@ const UpdateInfoScreen = ({route}) => {
         onPress={handleUpdate}
         disabled={loading}>
         <Text style={styles.buttonText}>
-          {loading ? 'Đang cập nhật...' : 'Start Your Journey'}
+          {loading ? 'Đang cập nhật...' : 'Bắt đầu hành trình của bạn'}
         </Text>
       </TouchableOpacity>
     </View>

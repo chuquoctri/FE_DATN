@@ -155,11 +155,11 @@ const WelcomeScreen = () => {
       {/* Tiêu đề */}
       <View style={styles.textContainer}>
         <Text style={styles.title}>
-          Find Your Perfect Stay with Our Curated Selection
+          Tìm nơi lưu trú lý tưởng của bạn chúng tôi
         </Text>
         <Text style={styles.description}>
-          Explore a variety of hotels tailored to your preferences and needs,
-          ensuring a perfect match for every trip.
+          Khám phá nhiều khách sạn phù hợp với sở thích và nhu cầu của bạn, đảm
+          bảo phù hợp cho mọi chuyến đi.
         </Text>
       </View>
 
@@ -167,16 +167,21 @@ const WelcomeScreen = () => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Login')}>
-        <Text style={styles.buttonText}>Start Your Journey</Text>
+        <Text style={styles.buttonText}>Bắt đầu hành trình của bạn</Text>
       </TouchableOpacity>
 
       {/* Liên kết Sign in */}
-      <Text style={styles.signInText}>
-        Already have an account?
-        <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}>
-          <Text style={styles.signInLink}>Sign in</Text>
-        </TouchableOpacity>
-      </Text>
+      <View style={styles.signInContainer}>
+        <Text style={styles.signInText}>
+          Bạn đã có tài khoản? {/* Thêm một khoảng trắng ở đây */}
+          <Text
+            style={styles.signInLink}
+            onPress={() => navigation.navigate('RegisterScreen')} // Di chuyển onPress vào đây
+          >
+            Đăng ký
+          </Text>
+        </Text>
+      </View>
     </View>
   );
 };
@@ -235,6 +240,10 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  signInContainer:{
+    alignItems: 'center',
+    flexDirection: 'row',
   },
   signInText: {
     fontSize: 14,

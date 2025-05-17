@@ -61,7 +61,7 @@ const VoucherScreen = () => {
       );
       const result = await response.json();
       if (result.status === 'success') {
-        Alert.alert('Thành công', result.message);
+        // Alert.alert('Thành công', result.message);
         fetchVouchers();
       } else {
         Alert.alert('Lỗi', result.message);
